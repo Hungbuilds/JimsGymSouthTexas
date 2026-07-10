@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /privacy-policy.html
+Disallow: /terms-of-use.html
+Disallow: /accessibility.html
+
+Sitemap: https://jimsgymtx.com/sitemap.xml
