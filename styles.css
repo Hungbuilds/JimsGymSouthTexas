@@ -87,6 +87,7 @@ img { display: block; max-width: 100%; }
 }
 .nav-dropdown-call:hover { background: #961317; color: var(--cream) !important; }
 @media (max-width: 680px) {
+  .nav-links { display: none; }
   .nav { padding: 0 20px; height: 92px; }
   .nav-logo img { height: 72px; }
 }
