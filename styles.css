@@ -11,14 +11,14 @@ img { display: block; max-width: 100%; }
 
 /* ── TOKENS ── */
 :root {
-  --black:   #0a0a0a;
-  --dark:    #111111;
-  --panel:   #181818;
-  --border:  #2a2a2a;
-  --iron:    #333333;
-  --silver:  #888888;
+  --black:   #0B0A09;
+  --dark:    #13110F;
+  --panel:   #1B1815;
+  --border:  #2F2925;
+  --iron:    #39322D;
+  --silver:  #96867A;
   --cream:   #f0ece4;
-  --red:     #F4580A;
+  --red:     #C0181E;
   --radius:  4px;
   --max:     1140px;
 }
@@ -44,7 +44,7 @@ img { display: block; max-width: 100%; }
   font-family: 'Anton', sans-serif; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
   transition: background .2s;
 }
-.nav-cta:hover { background: #d03818; }
+.nav-cta:hover { background: #961317; }
 .nav-cta-group { display: flex; align-items: center; gap: 12px; }
 .nav-cta-outline {
   border: 1px solid rgba(240,236,228,.3); color: var(--cream);
@@ -71,7 +71,7 @@ img { display: block; max-width: 100%; }
 .nav-dropdown-panel {
   position: absolute; top: calc(100% + 10px); right: 0; z-index: 300;
   background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
-  min-width: 220px; padding: 10px; display: flex; flex-direction: column; gap: 2px;
+  width: 100%; padding: 10px; display: flex; flex-direction: column; gap: 2px;
   box-shadow: 0 12px 32px rgba(0,0,0,.5);
 }
 .nav-dropdown-panel a {
@@ -84,7 +84,7 @@ img { display: block; max-width: 100%; }
   margin-top: 6px; background: var(--red); color: var(--cream) !important;
   text-align: center; font-family: 'Anton', sans-serif;
 }
-.nav-dropdown-call:hover { background: #d03818; color: var(--cream) !important; }
+.nav-dropdown-call:hover { background: #961317; color: var(--cream) !important; }
 @media (max-width: 680px) {
   .nav { padding: 0 20px; height: 92px; }
   .nav-logo img { height: 72px; }
@@ -220,7 +220,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0; }
 .expansion { max-width: var(--max); margin: 0 auto 96px; padding: 0 48px; }
 .expansion-inner {
   border: 1px solid var(--red); border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--panel) 0%, #1a0a05 100%);
+  background: linear-gradient(135deg, var(--panel) 0%, #230405 100%);
   padding: 52px 48px; display: flex; align-items: center; gap: 64px; flex-wrap: wrap;
 }
 .expansion-copy { flex: 1; min-width: 280px; }
