@@ -11,13 +11,13 @@ img { display: block; max-width: 100%; }
 
 /* ── TOKENS ── */
 :root {
-  --black:   #0B0A09;
-  --dark:    #13110F;
-  --panel:   #1B1815;
-  --border:  #2F2925;
-  --iron:    #39322D;
-  --silver:  #96867A;
-  --cream:   #f0ece4;
+  --black:   #000000;
+  --dark:    #0e0e0e;
+  --panel:   #161616;
+  --border:  #2a2a2a;
+  --iron:    #333333;
+  --silver:  #8a8a8a;
+  --cream:   #ffffff;
   --red:     #C0181E;
   --radius:  4px;
   --max:     1140px;
@@ -83,6 +83,7 @@ img { display: block; max-width: 100%; }
 .nav-dropdown-call {
   margin-top: 6px; background: var(--red); color: var(--cream) !important;
   text-align: center; font-family: 'Anton', sans-serif;
+  font-size: .78rem; letter-spacing: .02em; white-space: nowrap;
 }
 .nav-dropdown-call:hover { background: #961317; color: var(--cream) !important; }
 @media (max-width: 680px) {
