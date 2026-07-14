@@ -4,4 +4,4 @@ Disallow: /privacy-policy.html
 Disallow: /terms-of-use.html
 Disallow: /accessibility.html
 
-Sitemap: https://jimsgymtx.com/sitemap.xml
+Sitemap: https://hungbuilds.github.io/JimsGymSouthTexas/sitemap.xml
