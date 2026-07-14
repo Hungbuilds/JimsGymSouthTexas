@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Primary SEO -->
+<title>Our Community | Jim's Gym | Carrizo Springs, TX</title>
+<meta name="description" content="The story behind Jim's Gym in Carrizo Springs, TX — 15 years serving Dimmit County, and the visitors who've trained with us along the way.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hungbuilds.github.io/JimsGymSouthTexas/about.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Community | Jim's Gym | Carrizo Springs, TX">
+<meta property="og:description" content="The story behind Jim's Gym in Carrizo Springs, TX — 15 years serving Dimmit County, and the visitors who've trained with us along the way.">
+<meta property="og:url" content="https://hungbuilds.github.io/JimsGymSouthTexas/about.html">
+<meta property="og:site_name" content="Jim's Gym">
+<meta property="og:image" content="https://hungbuilds.github.io/JimsGymSouthTexas/images/wide_room_hero.webp">
+<meta property="og:locale" content="en_US">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="/"><img src="images/logo.png" alt="Jim's Gym"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#facility">Facility</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="about.html">Community</a></li>
+    <li><a href="index.html#location">Location</a></li>
+  </ul>
+  <a href="tel:8308765467" class="nav-cta">Call Now</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="eyebrow">Beyond The Weight Floor</div>
+  <h1 class="section-title">Our Community</h1>
+  <p class="section-body">Jim's Gym has been part of Carrizo Springs for 15 years. Along the way, we've had visitors from a lot further than Dimmit County — and some of them left something behind.</p>
+</section>
+
+<hr class="rule">
+
+<!-- FLAG STORY -->
+<section class="section">
+  <div class="about-split">
+    <div class="about-image">
+      <img src="images/nj_guard_flag.webp" alt="Signed New Jersey National Guard flag displayed at Jim's Gym" loading="lazy" style="border-radius: var(--radius); width: 100%; display: block;">
+    </div>
+    <div>
+      <div class="eyebrow">A Flag On Our Wall</div>
+      <h2 class="section-title" style="font-size: 1.8rem;">The New Jersey National Guard</h2>
+      <p class="section-body">
+        <!-- TODO (Jim): replace with the real story — who these service members were,
+             why they were training in the Carrizo Springs area, and roughly when.
+             Placeholder copy below keeps this honest until we have the details. -->
+        During a stretch in 2023–2024, members of the New Jersey National Guard training in the area
+        made Jim's Gym their regular stop. Before they moved on, they signed and left us this flag —
+        it's hung on our wall ever since as a small reminder of who's passed through Carrizo Springs
+        and trained alongside our regulars.
+      </p>
+      <p class="section-body">We're proud to have hosted them, and grateful for the work they do.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- CTA -->
+<div class="cta-bg">
+  <div class="cta-title">Come Train With Us</div>
+  <div class="cta-sub">Open 24 hours, every day. No appointment needed.</div>
+  <a href="tel:8308765467" class="btn-white">Call (830) 876-5467</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Jim's Gym</div>
+  <div>319 N 4th St · Carrizo Springs, TX 78834 · Open 24 Hours</div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="accessibility.html">Accessibility</a>
+    <span>&copy; 2026 Jim's Gym. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('active')">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-cap" id="lightbox-cap"></div>
+</div>
+
+<script>
+function closeLightbox(e) {
+  if (e.target === document.getElementById('lightbox')) {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
