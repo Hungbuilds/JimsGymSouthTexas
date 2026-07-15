@@ -1,6 +1,6 @@
 /* =========================================
    JIM'S GYM — SIMPLE REBUILD
-   Black / White / Red. Mobile-first. One scroll.
+   Black / White / Red. Mobile-first.
    ========================================= */
 
 :root {
@@ -39,7 +39,7 @@ a:focus-visible, button:focus-visible {
 }
 
 /* =========================================
-   SCROLL BAR — orange, fills across the top as you scroll
+   SCROLL BAR — red, fills across the top as you scroll
    ========================================= */
 #rotateBar {
   position: fixed;
@@ -105,6 +105,40 @@ a:focus-visible, button:focus-visible {
   0%   { box-shadow: 0 0 0 0 rgba(62,207,95,.55); }
   70%  { box-shadow: 0 0 0 5px rgba(62,207,95,0); }
   100% { box-shadow: 0 0 0 0 rgba(62,207,95,0); }
+}
+
+/* =========================================
+   PILL NAV — Gallery / Community / FAQ
+   ========================================= */
+.pillnav {
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #3a3a3a;
+  color: var(--dim);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: 9px 20px;
+  border-radius: 999px;
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
+}
+.pill:hover {
+  border-color: var(--red);
+  color: var(--white);
+  background: rgba(226,35,26,.08);
+}
+.pill.is-active {
+  border-color: var(--red);
+  color: var(--red);
 }
 
 /* =========================================
@@ -383,7 +417,7 @@ a:focus-visible, button:focus-visible {
 .legal-page {
   max-width: 720px;
   margin: 0 auto;
-  padding: 48px 20px 80px;
+  padding: 40px 20px 48px;
 }
 .legal-page h1 {
   font-family: 'Anton', 'Arial Black', sans-serif;
@@ -425,3 +459,137 @@ a:focus-visible, button:focus-visible {
   text-align: center;
 }
 .portal-box .hero-cta { margin-top: 20px; }
+
+/* =========================================
+   GALLERY
+   ========================================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  padding: 3px;
+}
+@media (min-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--panel);
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,0));
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 20px 8px 8px;
+  pointer-events: none;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 500;
+  padding: 24px;
+}
+.gallery-lightbox.is-open { display: flex; }
+.gallery-lightbox img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 4px;
+}
+.gallery-lightbox-caption {
+  margin-top: 14px;
+  color: var(--dim);
+  font-size: .85rem;
+  text-align: center;
+}
+.gallery-lightbox-close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* =========================================
+   COMMUNITY
+   ========================================= */
+.community-feature {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+@media (min-width: 720px) { .community-feature { aspect-ratio: 16 / 7; } }
+
+/* =========================================
+   FAQ ACCORDION
+   ========================================= */
+.faq-list { max-width: 720px; margin: 0 auto; padding: 0 20px 40px; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  text-align: left;
+  font-size: .98rem;
+  font-weight: 700;
+  padding: 18px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.faq-q::after {
+  content: '+';
+  color: var(--red);
+  font-size: 1.3rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+.faq-item.is-open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+}
+.faq-a p {
+  padding: 0 4px 18px;
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--dim);
+}
